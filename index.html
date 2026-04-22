@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flipkart Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Flipkart Clone</h2>
+  <input type="text" id="search" placeholder="Search products...">
+  <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+</header>
+
+<div id="products"></div>
+
+<div id="cart" class="hidden">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
