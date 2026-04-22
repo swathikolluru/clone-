@@ -1,22 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flipkart Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Top Bar -->
+<div class="top-bar">
+  <span>Location not set</span>
+  <a href="#">Select delivery location</a>
+</div>
+
+<!-- Header -->
 <header>
-  <h2>Flipkart Clone</h2>
-  <input type="text" id="search" placeholder="Search products...">
-  <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  <div class="header-container">
+    <div class="logo">
+      <span class="flipkart-text">Flipkart</span>
+      <span class="explore-text">Explore <span style="color: #FFB800;">Plus</span></span>
+    </div>
+    
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input type="text" id="search" placeholder="Search for Products, Brands and More">
+    </div>
+    
+    <div class="header-actions">
+      <button class="btn-login"><i class="fas fa-user"></i> Login</button>
+      <button class="btn-more"><span>More</span> <i class="fas fa-chevron-down"></i></button>
+      <button class="btn-cart" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+    </div>
+  </div>
 </header>
 
-<div id="products"></div>
+<!-- Categories Navigation -->
+<nav class="categories">
+  <div class="category-item active">
+    <i class="fas fa-heart"></i>
+    <span>For You</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-shirt"></i>
+    <span>Fashion</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-mobile-alt"></i>
+    <span>Mobiles</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-palette"></i>
+    <span>Beauty</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-laptop"></i>
+    <span>Electronics</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-blender"></i>
+    <span>Appliances</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-cube"></i>
+    <span>Toys, Games</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-utensils"></i>
+    <span>Food & More</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-car"></i>
+    <span>Auto Acc.</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-motorcycle"></i>
+    <span>2 Wheelers</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-dumbbell"></i>
+    <span>Sports</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-book"></i>
+    <span>Books</span>
+  </div>
+  <div class="category-item">
+    <i class="fas fa-chair"></i>
+    <span>Furniture</span>
+  </div>
+</nav>
 
-<div id="cart" class="hidden">
-  <h3>Your Cart</h3>
-  <ul id="cart-items"></ul>
+<!-- Main Content -->
+<div class="main-container">
+  <!-- Banners Section -->
+  <section class="banners">
+    <div class="banner-item banner-1">
+      <div class="banner-content">
+        <h2>Kurta Sets, Kurtis</h2>
+        <p>Cool ethnic trends!</p>
+        <div class="banner-price">From ₹129</div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1617451767069-407eda9e0853?w=300&h=250&fit=crop" alt="Kurta">
+    </div>
+    
+    <div class="banner-item banner-2">
+      <div class="banner-content">
+        <div class="brand-badge">vivo</div>
+        <h2>vivo T5 Pro 5G</h2>
+        <p>Sale is live</p>
+        <p class="spec">144 Hz 1.5K AMOLED eyecare display</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1511707267537-b85faf00021e?w=300&h=250&fit=crop" alt="Phone">
+    </div>
+    
+    <div class="banner-item banner-3">
+      <div class="banner-content">
+        <h2>ASUS Expertbook</h2>
+        <p>Launching 22nd April</p>
+        <p class="spec">Get ready for the ultra experience</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=250&fit=crop" alt="Laptop">
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="product-card">
+      <span class="ad-badge">AD</span>
+      <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=200&h=250&fit=crop" alt="Fashion">
+      <h3>Min. 70% Off</h3>
+      <p>Fashion & Accessories</p>
+    </div>
+    
+    <div class="product-card">
+      <span class="ad-badge">AD</span>
+      <img src="https://images.unsplash.com/photo-1608521889960-e9ace0ad3557?w=200&h=250&fit=crop" alt="Tricycle">
+      <h3>Up to 80% Off</h3>
+      <p>Toys & Games</p>
+    </div>
+    
+    <div class="product-card">
+      <span class="ad-badge">AD</span>
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&h=250&fit=crop" alt="Laptop">
+      <h3>From ₹6,299/M*</h3>
+      <p>Intel Core Laptops</p>
+    </div>
+  </section>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cart" class="cart-sidebar hidden">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body">
+    <ul id="cart-items"></ul>
+    <div id="empty-cart-msg" class="empty-cart">Your cart is empty</div>
+  </div>
 </div>
 
 <script src="script.js"></script>
